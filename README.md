@@ -1,2 +1,2 @@
-# Take Home Tes
-## Algorithm bootcamp - Data structures
+# Take Home Test
+### Algorithm bootcamp - Data structures
