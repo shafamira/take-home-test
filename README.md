@@ -1,4 +1,4 @@
 # Take Home Test
 ### Algorithm bootcamp - Data structures
 
-**Using Git, Terminal, Git Kraken for this take home test**
+**Everything here is made using Terminal, Git, Git Kraken, Visual Studio Code**
