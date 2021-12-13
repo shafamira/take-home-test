@@ -3,7 +3,7 @@
 
 **Everything here is made using Terminal, Git, Git Kraken, Visual Studio Code**
 
-### What i learn
+**What i learn**
 **File & Directory Commands**
 * mkdir *folder* : for create a folder
 * touch *file* : for create a file
