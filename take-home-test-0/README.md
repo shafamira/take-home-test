@@ -11,4 +11,3 @@ Berikut adalah harga dari kamar-kamar yang kami punya:
 |4| Bar        | ₩1,250,000 |
 
 Selamat menginap!
->>>>>>> parent of 09e4c7d... editing folder
