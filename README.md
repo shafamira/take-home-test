@@ -10,6 +10,7 @@
 * touch *file* : for create a file
 * cd *path* : to change directories
 * cd .. : to navigate up one directory level
+* ls: for list file/folder in a directory
 * mv *old file* *new file* : for rename a file
 * mv *old directory* *new directory* : for move a file to a different location
 * rm *file* : for delete file
