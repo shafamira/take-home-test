@@ -6,6 +6,7 @@
 ### My Notes:
 **File & Directory Commands**
 * mkdir *folder* : for create a folder
+* mkdir -p *folder/{folder/folder,folder..}* : for create a nested folder
 * touch *file* : for create a file
 * cd *path* : to change directories
 * cd .. : to navigate up one directory level
