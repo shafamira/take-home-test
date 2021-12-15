@@ -8,6 +8,7 @@
 * mkdir *folder* : for create a folder
 * mkdir -p *folder/{folder/folder,folder..}* : for create a nested folder
 * touch *file* : for create a file
+* nano *file* : for edit/modify codes in file
 * cd *path* : to change directories
 * cd .. : to navigate up one directory level
 * ls: for list file/folder in a directory
