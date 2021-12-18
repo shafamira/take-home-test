@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "customer.h"
 
 // prototypes
 void import_data_from_file();
@@ -27,23 +26,25 @@ struct Customer{
 Customer customers[100];
 Room rooms[100];
 
-int idxCustomer = 0;
-int idxRoom = 0;
+int idxC = 0;
+int idxR = 0;
 
+#include "customer.h"
 // main
 int main(){
+    import_data_from_file();
     int choice;
     menu();
     scanf("%d", &choice);
     do{
        if(choice==1){
-           create();
+           create(customers);
        } else if(choice == 2){
-           read();
+           read(customers, idxC);
        } else if (choice == 3){
-           update();
+        //    update(customers);
        } else if (choice == 4){
-           deleteData();
+        //    deleteData(customers);
        }
     } while (choice == 5);
     printf("Thank You!\n");
@@ -60,5 +61,44 @@ void menu(){
 }
 
 void import_data_from_file(){
-    
+    // customer file
+    FILE *fc = fopen("../customer/customer_data.txt", "r");
+    idxC = 0;
+    while (fscanf(fc, "%s,%s,%d,%[^,],%[^,],%d,%[^\n]\n", customers[idxC].id, customers[idxC].name, &customers[idxC].age, customers[idxC].reason, customers[idxC].place, &customers[idxC].year, customers[idxC].r.idroom) != EOF){
+        idxC++;
+    }
+    fclose(fc);
+
+    // room file
+    FILE *fr = fopen("../room/room.txt", "r");
+    idxR = 0;
+    while(fscanf(fr, "%s,%s,%d\n", rooms[idxR].idroom, rooms[idxR].room, &rooms[idxR].price) != EOF){
+        idxR++;
+    }
+    fclose(fr);
+
+    for (int i = 0; i < idxC; i++){
+        for (int j = 0; j < idxR; j++){
+            if(customers[i].r.idroom == rooms[j].idroom){
+                strcpy(customers[i].r.room, rooms[j].room);
+            }
+        }
+    }
 }
+
+// void import_data_from_file(){
+   
+// // while(fscanf(fcus,"%s,%s,%d,%[^,],%[^,],%d\n", c.id, c.name, c.age, c.reason, c.place, c.year, c.idroom)!= EOF){
+
+//     FILE *fc = fopen("../customer/customer_data.txt", "r");
+//     // while (fscanf(fc, "%s,%s,%d,%[^,],%[^,],%d\n" ){
+//     //     /* code */
+//     // }
+// }
+
+// void readData(){
+//     struct Customer cus;
+//     printf("|   | ID   | Name  | Age | Room   |\n");
+//     printf("|---|------|-------|-----|--------|\n");
+//     printf("|   | COO1 | Dodi  | 18  | Pantai |\n");
+// }
