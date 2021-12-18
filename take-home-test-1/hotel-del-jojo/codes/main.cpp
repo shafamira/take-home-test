@@ -85,20 +85,3 @@ void import_data_from_file(){
         }
     }
 }
-
-// void import_data_from_file(){
-   
-// // while(fscanf(fcus,"%s,%s,%d,%[^,],%[^,],%d\n", c.id, c.name, c.age, c.reason, c.place, c.year, c.idroom)!= EOF){
-
-//     FILE *fc = fopen("../customer/customer_data.txt", "r");
-//     // while (fscanf(fc, "%s,%s,%d,%[^,],%[^,],%d\n" ){
-//     //     /* code */
-//     // }
-// }
-
-// void readData(){
-//     struct Customer cus;
-//     printf("|   | ID   | Name  | Age | Room   |\n");
-//     printf("|---|------|-------|-----|--------|\n");
-//     printf("|   | COO1 | Dodi  | 18  | Pantai |\n");
-// }
